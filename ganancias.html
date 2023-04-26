@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Vakku" />
+        <meta name="description" content="Pokemon, Pureba 2 DNO037.">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html" class="active">Inicio</a> <a href="peliculas.html">Juegos</a> <a href="ganancias.html">Ganancias</a></p>
+            </nav>
+            <main>
+                <canvas id="grafico" height="60" width="100">
+                    <!--acá se mete el mapa-->
+                </canvas>
+            </main>
+            <footer>
+                 <p><a href="https://github.com/Vakku3">Vicente Vargas</a> <a href="https://github.com/profesorfaco/dno037-2023">DNO037</a></p>
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script>
+var ctx = document.getElementById('grafico').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['A/R/A', 'O/P/C', 'R/Z/E', 'D/P/P', 'B/N', 'B2/N2', 'X/Y', 'S/L/US/UL', 'E/E', 'E/V'],
+        datasets: [{
+            label: 'millones de unidades vendidas',
+            data: [45.69, 31.02, 23.28, 25.27, 15.64, 8.62, 16.65, 25.41, 25.68, 20.61],
+            backgroundColor: 'rgba(189, 0, 0, 0.5)',
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    </body>
+</html>
